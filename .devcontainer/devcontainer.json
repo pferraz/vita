@@ -1,5 +1,5 @@
 {
-  "name": "my-life-repo",
+  "name": "vita",
   "dockerComposeFile": "../docker/docker-compose.yml",
   "service": "workspace",
   "workspaceFolder": "/workspace",

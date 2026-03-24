@@ -1,0 +1,16 @@
+# ── git-crypt encryption rules ────────────────────────────────────────────────
+# Files matching these patterns are stored encrypted on GitHub
+# and decrypted transparently on your machine after git-crypt unlock
+
+personal/**   filter=git-crypt diff=git-crypt
+work/**        filter=git-crypt diff=git-crypt
+
+# ── These stay plaintext (readable on GitHub) ─────────────────────────────────
+# docker/
+# tools/
+# apps/
+# .ai/
+# templates/
+# README.md
+# .gitignore
+# .gitattributes itself

@@ -1,0 +1,22 @@
+# ── LLM clients ───────────────────────────────────────────────────────────────
+anthropic>=0.25.0
+openai>=1.30.0          # optional fallback
+
+# ── Config & env ──────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# ── CLI & output ──────────────────────────────────────────────────────────────
+rich>=13.7.0             # pretty terminal output
+typer>=0.12.0            # CLI argument parsing for tools
+
+# ── File watching (inbox automation) ─────────────────────────────────────────
+watchdog>=4.0.0
+
+# ── Document parsing (for non-markdown inputs) ───────────────────────────────
+pypdf>=4.2.0             # read PDFs dropped into _inbox/
+python-docx>=1.1.0      # read Word docs
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+httpx>=0.27.0
+pathlib2>=2.3.7
