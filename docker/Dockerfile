@@ -33,7 +33,7 @@ CYAN="\033[0;36m"
 
 echo ""
 echo -e "${CYAN}╔══════════════════════════════════════╗${RESET}"
-echo -e "${CYAN}║        Vita workspace        ║${RESET}"
+echo -e "${CYAN}║        Vita workspace                ║${RESET}"
 echo -e "${CYAN}╚══════════════════════════════════════╝${RESET}"
 echo ""
 
