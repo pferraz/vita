@@ -1,0 +1,15 @@
+services:
+  workspace:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/workspace          # mounts the whole repo
+    environment:
+      - GIT_CRYPT_KEY_B64      # pulled from your shell env, never hardcoded
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"            # dashboard web app
+      - "8000:8000"            # python tools / APIs

@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+# If a git-crypt key is injected via env var, write it and unlock
+if [ -n "$GIT_CRYPT_KEY_B64" ]; then
+  echo "$GIT_CRYPT_KEY_B64" | base64 -d > /tmp/git-crypt-key
+  git-crypt unlock /tmp/git-crypt-key
+  rm -f /tmp/git-crypt-key
+  echo "✓ Repo unlocked"
+else
+  echo "⚠ GIT_CRYPT_KEY_B64 not set — personal/ and work/ will be encrypted"
+fi
+
+exec "$@"

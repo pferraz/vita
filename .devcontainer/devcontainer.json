@@ -1,0 +1,25 @@
+{
+  "name": "my-life-repo",
+  "dockerComposeFile": "../docker/docker-compose.yml",
+  "service": "workspace",
+  "workspaceFolder": "/workspace",
+  "remoteEnv": {
+    "GIT_CRYPT_KEY_B64": "${localEnv:GIT_CRYPT_KEY_B64}"
+  },
+  "extensions": [
+    "yzhang.markdown-all-in-one",
+    "esbenp.prettier-vscode",
+    "ms-python.python"
+  ],
+  "postCreateCommand": "pip install -r tools/requirements.txt"
+}
+```
+
+**`tools/requirements.txt`** — starts minimal, you add to it:
+```
+anthropic
+openai          # optional fallback
+python-dotenv
+pyyaml
+rich            # nice CLI output for the ai-router
+watchdog        # watch _inbox/ for new files
